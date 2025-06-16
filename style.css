@@ -5,8 +5,22 @@ font-family: "roboto-flex";
 color: orange;
 text-shadow: 2px 2px 2px black;
 font-size: 60;
+align-items: center;
+justify-content:center;
 position: relative;
-top: 20px;
+top:20px;
+opacity: 0;
+transform: translateY(-200px);
+transition: transform 1s ease;
+animation: drop 2s ease 3.5s forwards;
+}
+@keyframes drop{
+to{opacity:1; 
+   transform: translateY(0px);
+}
+}
+#head1:hover{
+transform: scale(1.2);
 }
 #gmailp{
 position: relative;
@@ -312,7 +326,15 @@ float: left;
 margin-left: 25px;
 margin-top: -35px;
 border: 2px solid orange;
+opacity:0;
 transition: transform 1s ease;
+transform: translateX(-150px);
+animation: driftright 1s ease 3.5s forwards;
+}
+@keyframes driftright{
+to{opacity:1;
+   transform: translateX(0px);
+}
 }
 #img1:hover{
 transform: scale(1.03,1.03) translate(10px,10px);
